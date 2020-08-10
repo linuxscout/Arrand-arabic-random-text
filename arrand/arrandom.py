@@ -127,7 +127,11 @@ def sample(category="text",  max_length=1, vocalized = False,):
         base = sys.prefix
     else: # otherwise this is a regular python script
         base = os.path.dirname(os.path.realpath(__file__))
-    filepath = os.path.join(base, "data", filename)    
+    if vocalized:
+        filepath = os.path.join(base, "data/vocalized", filename)
+    else:
+        filepath = os.path.join(base, "data", filename)
+        
     try:
         with open(filepath) as fl:
             lines  = fl.readlines()
@@ -135,7 +139,8 @@ def sample(category="text",  max_length=1, vocalized = False,):
         print("File not found %s!"%filepath)
         sys.exit()
     if lines:
-        return random.sample(lines, max_length)
+        lines = random.sample(lines, max_length)
+        lines  = [l.strip() for l in lines]
     return lines
 
 def rand_sentence(word_dict = {}):
