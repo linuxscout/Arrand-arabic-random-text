@@ -1,0 +1,11 @@
+Metadata-Version: 0.1
+Name:Arrand: random Arabic text generator
+Version: 0.1
+Summary:  Arrand: random Arabic text generator
+Home-page: http://github.com/linuxscout/arrand
+Author: Taha Zerrouki
+Author-email: taha.zerrouki@gmail.com
+License: GPL
+Description: Arrand: random Arabic text generator
+Platform: Os-independent
+
