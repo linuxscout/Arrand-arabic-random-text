@@ -44,6 +44,7 @@ Arrand: random Arabic text generator
     * عدد فقرات
     * مجال معين
     * عدد كلمات معين
+* بناء مولد عشوائي للجمل دون معنى من ملف
 
 
  
@@ -136,7 +137,8 @@ Detailed examples and features in [Features](doc/features.md)
 >>> 
 
 ```
-*  Select Generic
+## Non sense texts
+
 ```python
 ... arrand.arrandom.rand_sentences(3)
 ['اطرحوه في فروع الأشجار؛ وسمعت خفق أوتار العيدان، وترجيع أصوات القيان، فما نفق عنده جلب إليه.', 'يبوخ وإنما يهيج عزة ومنعة، وشياطين خدعة زروع الحمية من هو شر لكم، وأبدلني بكم بدلا، ولكنها النقلة إلى المحسن البريء، فخاف المريب صولة العقاب، كما ترغبون في وجه الكريم على حمار معه حتى تقبل قولي، فقال لهم: لا يأمنان أن تزكي نفسك، وهديت فيه الحجاج، فلما قدم معاوية وخلى بينه وبينه.', 'راعى ضأن والله؟ وهل تجب الزكاة على وجه المهدي بدوام البحث، وطول تجربته في خيره.']
@@ -145,5 +147,14 @@ Detailed examples and features in [Features](doc/features.md)
 ```python
 ... arrand.arrandom.rand_sentence()
 'يدفنه، فقاتلوا في سربال ليل ...'
+
+```
+### Generate non sense texts from a file
+```python
+>>> import arrand.builder
+>>> mygen = arrand.builder.generator("text.txt")
+>>> mygen.rand_sentences(2)
+['قبل ذلك تهاون المحسن، واجترأ المسيء، وفسد الأمر، وشاركهما في رؤوسهم، يستعدون بها ووبخهم.', 
+'الجلوس لناننصفك منه من رسله، ويعمل، فيهم كما تحبون الحياة، ويرغبون في وقيعة ...']
 
 ```

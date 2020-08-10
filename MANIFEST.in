@@ -1,2 +1,3 @@
 include arrand/data/*
+include arrand/data/vocalized/*
 
