@@ -27,6 +27,7 @@ Arabic random text generator
 import os.path
 import sys
 import random
+import pyarabic.araby as araby
 from . import rand_const as rconst
 from . import nonsense_const
 
@@ -64,6 +65,16 @@ def phrase(vocalized = False,):
     @type: list of string
     """
     return select("hadith", vocalized)
+def word(vocalized = False,):
+    """
+    Select a random word from a category
+    
+    @type vocalized: boolean, default False
+    @return: a list of random text units
+    @type: list of string
+    """
+    return select("word", vocalized)
+    
         
 def paragraph(vocalized = False,):
     """

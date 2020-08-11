@@ -98,6 +98,11 @@ Detailed examples and features in [Features](doc/features.md)
 ... arrand.arrandom.phrase()
 'قال وكيع عن الأعمش عن خيثمة ، قال : حدثني من سمع عمر بن الخطاب يقول : لا تجزئ صلاة لم يقرأ فيها بفاتحة الكتاب وبشيء معها .'
 ```
+*  Select word
+```python
+... arrand.arrandom.word()
+'قال'
+```
 *  Select poem
 ```python
 ... arrand.arrandom.poem()

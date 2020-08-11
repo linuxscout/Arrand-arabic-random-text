@@ -35,4 +35,5 @@ CATEGORY_FILENAMES ={"":"texts.txt",
 "text": "texts.txt",
 "date":"dates.txt",
 "aya":"ayas.txt",
+"word":"words.txt",
 }

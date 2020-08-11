@@ -15,6 +15,8 @@ arrand.arrandom.aya()
 arrand.arrandom.proverb()
 ## Select phrase
 arrand.arrandom.phrase()
+## select word
+arrand.arrandom.word()
 ## Select poem
 arrand.arrandom.poem()
 
