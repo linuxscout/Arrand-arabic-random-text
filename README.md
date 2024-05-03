@@ -1,7 +1,9 @@
 # Arrand: random Arabic text generator
 
 # مكتبة توليد النص العربي عشوائيا
+
 Arrand: random Arabic text generator
+مكتبة برمجية بلغة بيثون “الرّند” لتوليد النصوص العربية عشوائيا، تناسب مطوري الوب، ومن يرغبون في ملء الصفحات بنصوص تجريبية، أو مطورين يبحثون عن نصوص عشوائية تجريبية،
 
 ![arrand logo](doc/arrand_header.png  "arrand logo")
 
