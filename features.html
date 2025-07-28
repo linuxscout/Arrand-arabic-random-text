@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📚 Documentation &amp; API Usage &mdash; Arrand-arabic-random-text 0.2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=938c9ccc"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="📖 Arrand Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Arrand-arabic-random-text
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">📚 Documentation &amp; API Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#available-functions">🧠 Available Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-get-one-text-from-each-category">🔎 Example: Get One Text from Each Category</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-get-vocalized-data">🔄 Example: Get Vocalized Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-generate-nonsense-sentences">📦 Example: Generate Nonsense Sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#categories-available">🗂️ Categories Available</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#command-line-interface-cli">🖥️ Command Line Interface (CLI)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">🔧 Basic usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#select-a-specific-category">🗂️ Select a specific category</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generate-multiple-entries">🔢 Generate multiple entries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enable-vocalization-tashkeel">🔤 Enable vocalization (tashkeel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generate-nonsense-sentences">🤪 Generate nonsense sentences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-text-by-length">✂️ Filter text by length</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#show-help">🆘 Show help</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arrand-arabic-random-text</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">📚 Documentation &amp; API Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/features.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation-api-usage">
+<h1>📚 Documentation &amp; API Usage<a class="headerlink" href="#documentation-api-usage" title="Link to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">arrand.arrandom</span></code> module provides simple functions to retrieve random Arabic texts across various categories.</p>
+<section id="available-functions">
+<h2>🧠 Available Functions<a class="headerlink" href="#available-functions" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Supports Vocalized</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aya()</span></code></p></td>
+<td><p>Returns a random Quranic verse</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">hadith()</span></code></p></td>
+<td><p>Returns a random Hadith</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">phrase()</span></code></p></td>
+<td><p>Returns a random literary phrase</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">proverb()</span></code></p></td>
+<td><p>Returns a random Arabic proverb</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">poem()</span></code></p></td>
+<td><p>Returns a random line of poetry</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">paragraph()</span></code></p></td>
+<td><p>Returns a random paragraph</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">word()</span></code></p></td>
+<td><p>Returns a single random Arabic word</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">select(category)</span></code></p></td>
+<td><p>Generic text selector by category</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sample(category,</span> <span class="pre">max_length)</span></code></p></td>
+<td><p>Returns multiple lines from category</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rand_sentence()</span></code></p></td>
+<td><p>Generates a nonsense sentence</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rand_sentences(n)</span></code></p></td>
+<td><p>Generates multiple nonsense lines</p></td>
+<td><p>❌</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-get-one-text-from-each-category">
+<h2>🔎 Example: Get One Text from Each Category<a class="headerlink" href="#example-get-one-text-from-each-category" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">arrand.arrandom</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rnd</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">aya</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">hadith</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">proverb</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">phrase</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">word</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">poem</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">paragraph</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="example-get-vocalized-data">
+<h2>🔄 Example: Get Vocalized Data<a class="headerlink" href="#example-get-vocalized-data" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">aya</span><span class="p">(</span><span class="n">vocalized</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">vocalized</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="example-generate-nonsense-sentences">
+<h2>📦 Example: Generate Nonsense Sentences<a class="headerlink" href="#example-generate-nonsense-sentences" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">rand_sentence</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">rand_sentences</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="categories-available">
+<h2>🗂️ Categories Available<a class="headerlink" href="#categories-available" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;aya&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;hadith&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;phrase&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;proverb&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;poem&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;paragraph&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;word&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;text&quot;</span></code></p></li>
+</ul>
+<p>To retrieve multiple lines, use:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rnd</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;poem&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To get a single random line:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rnd</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;proverb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Generate samples with word count control</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rnd</span><span class="o">.</span><span class="n">arrandom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">min_words</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">max_words</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="command-line-interface-cli">
+<h1>🖥️ Command Line Interface (CLI)<a class="headerlink" href="#command-line-interface-cli" title="Link to this heading"></a></h1>
+<p>Once installed, you can use <code class="docutils literal notranslate"><span class="pre">arrand</span></code> directly from the command line:</p>
+<section id="basic-usage">
+<h2>🔧 Basic usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span>bash
+arrand
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Outputs a random Arabic text from the “text” category.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="select-a-specific-category">
+<h2>🗂️ Select a specific category<a class="headerlink" href="#select-a-specific-category" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>arrand<span class="w"> </span>--category<span class="w"> </span>aya
+arrand<span class="w"> </span>--category<span class="w"> </span>hadith
+arrand<span class="w"> </span>--category<span class="w"> </span>phrase
+arrand<span class="w"> </span>--category<span class="w"> </span>poem
+arrand<span class="w"> </span>--category<span class="w"> </span>proverb
+arrand<span class="w"> </span>--category<span class="w"> </span>paragraph
+arrand<span class="w"> </span>--category<span class="w"> </span>word
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="generate-multiple-entries">
+<h2>🔢 Generate multiple entries<a class="headerlink" href="#generate-multiple-entries" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">-n</span></code> or <code class="docutils literal notranslate"><span class="pre">--number</span></code> to control how many items to generate:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>arrand<span class="w"> </span>-c<span class="w"> </span>poem<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span>
+arrand<span class="w"> </span>-c<span class="w"> </span>phrase<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="enable-vocalization-tashkeel">
+<h2>🔤 Enable vocalization (tashkeel)<a class="headerlink" href="#enable-vocalization-tashkeel" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>arrand<span class="w"> </span>-c<span class="w"> </span>hadith<span class="w"> </span>--vocalized
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="generate-nonsense-sentences">
+<h2>🤪 Generate nonsense sentences<a class="headerlink" href="#generate-nonsense-sentences" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>arrand<span class="w"> </span>--category<span class="w"> </span>nonsense
+arrand<span class="w"> </span>-c<span class="w"> </span>nonsense<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="filter-text-by-length">
+<h2>✂️ Filter text by length<a class="headerlink" href="#filter-text-by-length" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>arrand<span class="w"> </span>--category<span class="w"> </span>poem<span class="w"> </span>--min-words<span class="w"> </span><span class="m">5</span><span class="w"> </span>--max-words<span class="w"> </span><span class="m">10</span>
+arrand<span class="w"> </span>--category<span class="w"> </span>phrase<span class="w"> </span>--max-chars<span class="w"> </span><span class="m">120</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="show-help">
+<h2>🆘 Show help<a class="headerlink" href="#show-help" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>arrand<span class="w"> </span>--help
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="📖 Arrand Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Taha Zerrouki.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
