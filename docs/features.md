@@ -132,6 +132,15 @@ arrand --category nonsense
 arrand -c nonsense -n 2
 ```
 
+----
+
+### ✂️ Filter text by length
+
+```bash
+arrand --category poem --min-words 5 --max-words 10
+arrand --category phrase --max-chars 120
+```
+
 ------
 
 ### 🆘 Show help

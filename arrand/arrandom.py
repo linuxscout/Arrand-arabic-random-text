@@ -155,6 +155,7 @@ def sample(
     category="text",
     max_length=1,
     vocalized=False,
+min_words=None, max_words=None, max_chars=None
 ):
     """
     Select a random text from a category with a maximum units
@@ -178,16 +179,32 @@ def sample(
             data_path = files(data).joinpath(filename)
 
         with data_path.open("r", encoding="utf-8") as fl:
-            lines = fl.readlines()
+            all_lines = fl.readlines()
     except FileNotFoundError:
         return [f"File not found: {filename}"]
     else:
-        if lines:
-            lines = [l.strip() for l in lines if l.strip()]
-            lines = random.sample(lines, max_length)
-            # return an non empty lines
-            return lines
+        # Apply filtering
+        def line_filter(line):
+            line = line.strip()
+            if not line:
+                return False
+            if min_words or max_words:
+                wc = len(line.split())
+                if min_words and wc < min_words:
+                    return False
+                if max_words and wc > max_words:
+                    return False
+            if max_chars and len(line) > max_chars:
+                return False
+            return True
+        filtered = list(filter(line_filter, all_lines))
+        if not filtered:
+            return []
+
+        count = min(len(filtered), max_length)
+        return random.sample(filtered, count)
     return []
+
 
 
 def rand_sentence(word_dict={}):

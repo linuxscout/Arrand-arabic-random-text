@@ -4,6 +4,10 @@ from . import arrandom
 
 def main():
     parser = argparse.ArgumentParser(description="Arrand: Arabic Random Text Generator")
+    parser.add_argument("--min-words", type=int, help="Minimum word count per line")
+    parser.add_argument("--max-words", type=int, help="Maximum word count per line")
+    parser.add_argument("--max-chars", type=int, help="Maximum characters per line")
+
     parser.add_argument(
         "-c",
         "--category",
@@ -52,7 +56,10 @@ def main():
         print(func(vocalized=args.vocalized))
     else:
         # Use sample() for multiple lines
-        lines = arrandom.sample(args.category, args.number, args.vocalized)
+        lines = arrandom.sample(args.category, args.number, args.vocalized,
+                                min_words=args.min_words,
+    max_words=args.max_words,
+    max_chars=args.max_chars,)
         for line in lines:
             print(line)
 

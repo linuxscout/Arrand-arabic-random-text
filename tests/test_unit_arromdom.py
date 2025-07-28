@@ -93,6 +93,33 @@ class TestArrandom(unittest.TestCase):
         sentence = arrandom.rand_sentence(word_dict={})
         self.assertIsInstance(sentence, str)
 
+    # ----------- Filtering Options (word/char length) -----------
+
+    def test_sample_min_words(self):
+        lines = arrandom.sample(category="text", max_length=5, min_words=3)
+        self.assertTrue(all(len(line.split()) >= 3 for line in lines))
+
+    def test_sample_max_words(self):
+        lines = arrandom.sample(category="text", max_length=5, max_words=10)
+        self.assertTrue(all(len(line.split()) <= 10 for line in lines))
+
+    def test_sample_min_and_max_words(self):
+        lines = arrandom.sample(category="text", max_length=5, min_words=3, max_words=8)
+        for line in lines:
+            wc = len(line.split())
+            self.assertGreaterEqual(wc, 3)
+            self.assertLessEqual(wc, 8)
+
+    def test_sample_max_chars(self):
+        lines = arrandom.sample(category="text", max_length=5, max_chars=80)
+        for line in lines:
+            self.assertLessEqual(len(line), 80)
+
+    def test_sample_filters_return_no_match(self):
+        lines = arrandom.sample(category="text", max_length=3, min_words=999)
+        self.assertEqual(len(lines), 0)
+
+
 
 if __name__ == '__main__':
     unittest.main()
