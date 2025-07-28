@@ -28,3 +28,10 @@ docs:
 	epydoc -v --config epydoc.conf
 dev:
 	pip install -e .
+
+cli:
+	python -m arrand                          # Default (random text)
+	python -m arrand --category aya          # One random aya
+	python -m arrand -c poem -n 3            # Three random poems
+	python -m arrand -c phrase --vocalized   # Vocalized phrase
+	python -m arrand -c nonsense -n 2        # Nonsense lines
