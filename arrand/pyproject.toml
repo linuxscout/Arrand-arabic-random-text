@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "arrand.__version__"}
+
+[project]
+name = "arrand"
+#version = "0.1.0"
+description = "Arrand: random Arabic text generator"
+readme = "README.rst"
+requires-python = ">=3.6"
+license = { text = "GPL" }
+authors = [
+  { name = "Taha Zerrouki", email = "taha.zerrouki@gmail.com" }
+]
+urls = { Homepage = "http://arrand.sourceforge.net/" }
+
+dependencies = [
+  "pyarabic>=0.6.8",
+  'importlib_resources; python_version < "3.7"'
+]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["arrand"]
+
+[tool.setuptools.package-data]
+arrand = [
+  "doc/*.*",
+  "doc/html/*",
+  "data/*.sqlite",
+  "data/*.sql"
+]
