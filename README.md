@@ -164,3 +164,11 @@ Detailed examples and features in [Features](doc/features.md)
 
 ```
 
+### **Generate samples with word count control**
+
+```python
+>>> arrand.arrandom.sample(category="text", max_length=3, min_words=9, max_words=20)
+['صهصلق في الصهيل تحسبه ... أشرج حلقومه على جرس\n', 'وقال أحمد بن يوسف الكاتب: إذا لم تقدر أن تعض يد عدوك فقبلها.\n', 'الله يعلم ما تركت قتالهم ... حتى رموا مهري بأشقر مزبد\n']
+>>> 
+```
+

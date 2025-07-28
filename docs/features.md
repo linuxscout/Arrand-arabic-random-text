@@ -73,6 +73,12 @@ To get a single random line:
 rnd.select("proverb")
 ```
 
+Generate samples with word count control
+
+```python
+rnd.arrandom.sample(category="text", max_length=3, min_words=9, max_words=20)
+```
+
 
 
 ## 🖥️ Command Line Interface (CLI)
