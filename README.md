@@ -22,7 +22,7 @@ License  |[GPL](https://github.com/linuxscout/arrand/master/LICENSE)
 Tracker  |[linuxscout/arrand/Issues](https://github.com/linuxscout/arrand/issues)
 Source  |[Github](http://github.com/linuxscout/arrand)
 Feedbacks  |[Comments](https://github.com/linuxscout/arrand/)
-Accounts  |[@Twitter](https://twitter.com/linuxscout))
+Documentation  |[@Docs](http://inuxscout.github.io/Arrand-arabic-random-text)
 
 ## Description
 
