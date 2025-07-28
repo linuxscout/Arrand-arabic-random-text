@@ -30,6 +30,12 @@ import random
 import pyarabic.araby as araby
 from . import rand_const as rconst
 from . import nonsense_const
+from . import data
+from .data import vocalized as data_vocalized
+try:
+    import importlib.resources as pkg_resources
+except:
+    import importlib_resources as pkg_resources
 
 def select(category="text",  vocalized = False,):
     """
@@ -129,31 +135,63 @@ def sample(category="text",  max_length=1, vocalized = False,):
     @return: a list of random text units
     @type: list of string
     """
+    filename = rconst.CATEGORY_FILENAMES.get(category.lower(), "texts.txt")
+
+    try:
+        if vocalized:
+            with pkg_resources.open_text(data_vocalized,  filename) as fl:
+                lines = fl.readlines()
+        else:
+            with pkg_resources.open_text(data,  filename) as fl:
+                lines = fl.readlines()
+    except FileNotFoundError:
+        return [f"File not found: {filename}"]
+
+    if lines:
+        lines = random.sample(lines, max_length)
+        return [l.strip() for l in lines]
+    return []
+
+
+
+
+def Xsample(category="text", max_length=1, vocalized=False, ):
+    """
+    Select a random text from a category with a maximum units
+
+    @param category: the selected category (text, paragraph, phrase, Hadith, Aya, proverb, poem)
+    @type category: unicode
+    @param max_length: maximun units of text to select
+    @type max_length: int, default 1
+    @param vocalized: want to select vocalized text
+    @type vocalized: boolean, default False
+    @return: a list of random text units
+    @type: list of string
+    """
     lines = []
     # select the file according to category
     filename = rconst.CATEGORY_FILENAMES.get(category.lower(), "texts.txt")
     # read file and get random lines
     # get the database path
-    if hasattr(sys, 'frozen'): # only when running in py2exe this exists
+    if hasattr(sys, 'frozen'):  # only when running in py2exe this exists
         base = sys.prefix
-    else: # otherwise this is a regular python script
+    else:  # otherwise this is a regular python script
         base = os.path.dirname(os.path.realpath(__file__))
     if vocalized:
         filepath = os.path.join(base, "data/vocalized", filename)
     else:
         filepath = os.path.join(base, "data", filename)
-        
+
     try:
         with open(filepath) as fl:
-            lines  = fl.readlines()
+            lines = fl.readlines()
     except:
-        print("File not found %s!"%filepath)
+        print("File not found %s!" % filepath)
         sys.exit()
     if lines:
         lines = random.sample(lines, max_length)
-        lines  = [l.strip() for l in lines]
+        lines = [l.strip() for l in lines]
     return lines
-
 def rand_sentence(word_dict = {}):
     """
     Select a random sentence with non sense

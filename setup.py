@@ -20,6 +20,7 @@ setup (name='arrand', version='0.1',
       package_dir={'arrand': 'arrand'},
       packages=['arrand'],
       install_requires=[ "pyarabic>=0.6.8",
+                         'importlib_resources; python_version < "3.7"'
             ],         
       include_package_data=True,
       package_data = {

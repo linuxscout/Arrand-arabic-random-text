@@ -1,1 +1,2 @@
 pyarabic>=0.6.8
+importlib_resources; python_version < "3.7"
