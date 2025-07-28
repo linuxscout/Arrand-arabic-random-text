@@ -70,7 +70,7 @@ def phrase(vocalized = False,):
     @return: a list of random text units
     @type: list of string
     """
-    return select("hadith", vocalized)
+    return select("phrase", vocalized)
 def word(vocalized = False,):
     """
     Select a random word from a category
@@ -153,45 +153,6 @@ def sample(category="text",  max_length=1, vocalized = False,):
     return []
 
 
-
-
-def Xsample(category="text", max_length=1, vocalized=False, ):
-    """
-    Select a random text from a category with a maximum units
-
-    @param category: the selected category (text, paragraph, phrase, Hadith, Aya, proverb, poem)
-    @type category: unicode
-    @param max_length: maximun units of text to select
-    @type max_length: int, default 1
-    @param vocalized: want to select vocalized text
-    @type vocalized: boolean, default False
-    @return: a list of random text units
-    @type: list of string
-    """
-    lines = []
-    # select the file according to category
-    filename = rconst.CATEGORY_FILENAMES.get(category.lower(), "texts.txt")
-    # read file and get random lines
-    # get the database path
-    if hasattr(sys, 'frozen'):  # only when running in py2exe this exists
-        base = sys.prefix
-    else:  # otherwise this is a regular python script
-        base = os.path.dirname(os.path.realpath(__file__))
-    if vocalized:
-        filepath = os.path.join(base, "data/vocalized", filename)
-    else:
-        filepath = os.path.join(base, "data", filename)
-
-    try:
-        with open(filepath) as fl:
-            lines = fl.readlines()
-    except:
-        print("File not found %s!" % filepath)
-        sys.exit()
-    if lines:
-        lines = random.sample(lines, max_length)
-        lines = [l.strip() for l in lines]
-    return lines
 def rand_sentence(word_dict = {}):
     """
     Select a random sentence with non sense

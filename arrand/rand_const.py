@@ -29,6 +29,7 @@ FORBIDDEN = [u"النبي",
 ]
 CATEGORY_FILENAMES ={"":"texts.txt",
 "hadith": "hadiths.txt",
+"phrase": "phrases.txt",
 "poem": "poems.txt",
 "proverb": "proverbs.txt",
 "paragraph": "paragraphs.txt",
