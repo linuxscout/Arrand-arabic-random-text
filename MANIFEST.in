@@ -1,3 +1,12 @@
-include arrand/data/*
-include arrand/data/vocalized/*
+include README.rst
+include LICENSE
+include AUTHORS.md
+include CREDITS
+include requirements.txt
+
+recursive-include arrand/data *.txt
+recursive-include arrand/data/vocalized *.txt
+recursive-include arrand/doc *.*
+recursive-include arrand/doc/html *.*
+
 
