@@ -3,26 +3,32 @@ from . import arrandom
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Arrand: Arabic Random Text Generator"
-    )
+    parser = argparse.ArgumentParser(description="Arrand: Arabic Random Text Generator")
     parser.add_argument(
-        "-c", "--category",
-        choices=["aya", "hadith", "phrase", "proverb", "poem", "paragraph", "word", "text", "nonsense"],
+        "-c",
+        "--category",
+        choices=[
+            "aya",
+            "hadith",
+            "phrase",
+            "proverb",
+            "poem",
+            "paragraph",
+            "word",
+            "text",
+            "nonsense",
+        ],
         default="text",
-        help="Category of text to generate"
+        help="Category of text to generate",
     )
     parser.add_argument(
-        "-n", "--number",
+        "-n",
+        "--number",
         type=int,
         default=1,
-        help="Number of lines to generate (for sample or nonsense)"
+        help="Number of lines to generate (for sample or nonsense)",
     )
-    parser.add_argument(
-        "--vocalized",
-        action="store_true",
-        help="Use vocalized text"
-    )
+    parser.add_argument("--vocalized", action="store_true", help="Use vocalized text")
 
     args = parser.parse_args()
 
