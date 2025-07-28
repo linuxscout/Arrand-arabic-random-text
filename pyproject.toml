@@ -42,3 +42,7 @@ arrand = [
   "data/*.sqlite",
   "data/*.sql"
 ]
+
+
+[project.scripts]
+arrand = "arrand.__main__:main"

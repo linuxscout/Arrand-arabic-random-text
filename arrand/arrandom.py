@@ -213,5 +213,3 @@ if __name__ == '__main__':
     lines = select('text')
     print(lines)
     print(hadith())
-    import sys
-    sys.exit(main(sys.argv))

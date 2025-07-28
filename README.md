@@ -3,7 +3,7 @@
 # مكتبة توليد النص العربي عشوائيا
 Arrand: random Arabic text generator
 
-![arrand logo](doc/arrand_header.png  "arrand logo")
+![arrand logo](docs/arrand_header.png  "arrand logo")
 
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/arrand)
 
@@ -11,11 +11,11 @@ Arrand: random Arabic text generator
   Developpers:  Taha Zerrouki: http://tahadz.com
     taha dot zerrouki at gmail dot com
 
-  
+
 Features |   value
 ---------|---------------------------------------------------------------------------------
 Authors  | [Authors.md](https://github.com/linuxscout/arrand/master/AUTHORS.md)
-Release  | 0.1
+Release  | 0.2 
 License  |[GPL](https://github.com/linuxscout/arrand/master/LICENSE)
 Tracker  |[linuxscout/arrand/Issues](https://github.com/linuxscout/arrand/issues)
 Source  |[Github](http://github.com/linuxscout/arrand)
@@ -47,7 +47,7 @@ Arrand: random Arabic text generator
 * بناء مولد عشوائي للجمل دون معنى من ملف
 
 
- 
+
 
 
 
@@ -163,3 +163,4 @@ Detailed examples and features in [Features](doc/features.md)
 'الجلوس لناننصفك منه من رسله، ويعمل، فيهم كما تحبون الحياة، ويرغبون في وقيعة ...']
 
 ```
+
