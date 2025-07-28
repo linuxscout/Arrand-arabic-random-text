@@ -1,0 +1,17 @@
+# Sphinx core
+sphinx>=6.0.0
+
+# Markdown support
+myst-parser>=1.0.0
+
+# Type hints in autodoc
+sphinx-autodoc-typehints>=1.23.0
+
+# NumPy/Google docstring style
+sphinx.ext.napoleon
+
+# Syntax highlighting and view source links
+sphinx.ext.viewcode
+
+# Theme: ReadTheDocs
+sphinx-rtd-theme>=1.2.0
