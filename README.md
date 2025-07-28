@@ -52,8 +52,6 @@ Arrand: random Arabic text generator
 
 
 
-
-
 ### Usage
 
 ### install

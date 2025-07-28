@@ -24,8 +24,11 @@ upload:
 
 test:
 	python3 -m unittest discover tests
+
 docs:
-	epydoc -v --config epydoc.conf
+	cd docs && make html
+publish_docs:
+	ghp-import -n -p -f docs/_build/html
 dev:
 	pip install -e .
 
@@ -35,3 +38,6 @@ cli:
 	python -m arrand -c poem -n 3            # Three random poems
 	python -m arrand -c phrase --vocalized   # Vocalized phrase
 	python -m arrand -c nonsense -n 2        # Nonsense lines
+
+clean:
+	rm -rf dist build *.egg-info docs/build __pycache__ .pytest_cache .mypy_cach
