@@ -183,6 +183,7 @@ min_words=None, max_words=None, max_chars=None
     except FileNotFoundError:
         return [f"File not found: {filename}"]
     else:
+        all_lines =[l.strip() for l in all_lines]
         # Apply filtering
         def line_filter(line):
             line = line.strip()
