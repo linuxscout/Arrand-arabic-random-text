@@ -33,9 +33,9 @@ from . import nonsense_const
 from . import data
 from .data import vocalized as data_vocalized
 try:
-    import importlib.resources as pkg_resources
+    from importlib.resources import files
 except:
-    import importlib_resources as pkg_resources
+    import importlib_resources as files
 
 def select(category="text",  vocalized = False,):
     """
@@ -135,21 +135,25 @@ def sample(category="text",  max_length=1, vocalized = False,):
     @return: a list of random text units
     @type: list of string
     """
-    filename = rconst.CATEGORY_FILENAMES.get(category.lower(), "texts.txt")
-
+    filename = rconst.CATEGORY_FILENAMES.get(category.lower(), "X")
+    if not filename:
+        return  []
     try:
         if vocalized:
-            with pkg_resources.open_text(data_vocalized,  filename) as fl:
-                lines = fl.readlines()
+            data_path = files(data_vocalized).joinpath(filename)
         else:
-            with pkg_resources.open_text(data,  filename) as fl:
-                lines = fl.readlines()
+            data_path = files(data).joinpath(filename)
+
+        with data_path.open("r", encoding="utf-8") as fl:
+            lines = fl.readlines()
     except FileNotFoundError:
         return [f"File not found: {filename}"]
-
-    if lines:
-        lines = random.sample(lines, max_length)
-        return [l.strip() for l in lines]
+    else:
+        if lines:
+            lines = [l.strip() for l in lines if l.strip()]
+            lines = random.sample(lines, max_length)
+            # return an non empty lines
+            return lines
     return []
 
 

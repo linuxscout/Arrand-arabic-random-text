@@ -7,9 +7,9 @@ version = {attr = "arrand.__version__"}
 
 [project]
 name = "arrand"
-#version = "0.1.0"
+version = "0.2.0"
 description = "Arrand: random Arabic text generator"
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.6"
 license = { text = "GPL" }
 authors = [
