@@ -7,8 +7,12 @@ Arrand: random Arabic text generator
 
 ![arrand logo](docs/arrand_header.png  "arrand logo")
 
-![PyPI - Downloads](https://img.shields.io/pypi/dm/arrand)
+![Python Versions](https://img.shields.io/pypi/pyversions/arrand)
 
+![Downloads](https://img.shields.io/pypi/dm/arrand)
+![Build](https://img.shields.io/github/actions/workflow/status/linuxscout/arrand/python-app.yml?label=build)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 
   Developpers:  Taha Zerrouki: http://tahadz.com
     taha dot zerrouki at gmail dot com
@@ -17,8 +21,8 @@ Arrand: random Arabic text generator
 Features |   value
 ---------|---------------------------------------------------------------------------------
 Authors  | [Authors.md](https://github.com/linuxscout/arrand/master/AUTHORS.md)
-Release  | 0.2 
-License  |[GPL](https://github.com/linuxscout/arrand/master/LICENSE)
+Release  | ![PyPI](https://img.shields.io/pypi/v/arrand) 
+License  |![License](https://img.shields.io/pypi/l/arrand)
 Tracker  |[linuxscout/arrand/Issues](https://github.com/linuxscout/arrand/issues)
 Source  |[Github](http://github.com/linuxscout/arrand)
 Feedbacks  |[Comments](https://github.com/linuxscout/arrand/)
