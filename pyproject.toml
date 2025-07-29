@@ -2,12 +2,11 @@
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.dynamic]
-version = {attr = "arrand.__version__"}
+
 
 [project]
 name = "arrand"
-version = "0.2.0"
+#version = "0.2.0"
 description = "Arrand: random Arabic text generator"
 readme = "README.md"
 requires-python = ">=3.6"
@@ -29,11 +28,17 @@ classifiers = [
   "Programming Language :: Python",
 ]
 
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "arrand.__version__.__version__"}
+
 [tool.setuptools]
 include-package-data = true
 
 [tool.setuptools.packages.find]
-where = ["arrand"]
+where = ["."]
+include = ["arrand*",]
 
 [tool.setuptools.package-data]
 arrand = [
