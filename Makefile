@@ -1,43 +1,55 @@
-#/usr/bin/sh
-# Build Arrand: random Arabic text generator
+# Makefile for Arrand: Arabic Random Text Generator
+.PHONY: all clean backup install install3 wheel wheel3 test docs publish publish_docs dev cli md2html
 
+# Default target
 default: all
-# Clean build files
-clean:
-	
-backup: 
-	
-#create all files 
-all: install install3 wheel wheel3  doc
-# Publish to github
-publish:
-	git push origin master 
 
-md2html:
-	pandoc -s -r markdown -w html README.md -o README.html
-	
-wheel:
-	sudo python3 setup.py bdist_wheel
+# Build everything: wheel, docs, etc.
+all: wheel docs
 
-upload:
-	echo "use twine upload dist/arrand-0.1.tar.gz"
+# Install in development mode
+dev:
+	pip install -e .[dev]
 
+# Run tests
 test:
-	python3 -m unittest discover tests
+	python3 -m unittest discover -s tests
 
+# Build wheel
+wheel:
+	python3 -m build --wheel
+
+# Upload to PyPI (manual safety guard)
+upload:
+	@echo "📦 Use: twine upload dist/*"
+
+# Build docs using Sphinx
 docs:
 	cd docs && make html
+
+# Publish docs to GitHub Pages
 publish_docs:
 	ghp-import -n -p -f docs/_build/html
-dev:
-	pip install -e .
 
-cli:
-	python -m arrand                          # Default (random text)
-	python -m arrand --category aya          # One random aya
-	python -m arrand -c poem -n 3            # Three random poems
-	python -m arrand -c phrase --vocalized   # Vocalized phrase
-	python -m arrand -c nonsense -n 2        # Nonsense lines
+# Convert README to HTML
+md2html:
+	pandoc -s -r markdown -w html README.md -o README.html
 
+# Clean build artifacts
 clean:
-	rm -rf dist build *.egg-info docs/build __pycache__ .pytest_cache .mypy_cach
+	rm -rf dist build *.egg-info \
+		docs/_build __pycache__ .pytest_cache .mypy_cache \
+		*.log .coverage htmlcov .tox
+
+# CLI usage examples
+cli:
+	@echo "▶ Run CLI examples:"
+	@echo "  python -m arrand"
+	@echo "  python -m arrand --category aya"
+	@echo "  python -m arrand -c poem -n 3"
+	@echo "  python -m arrand -c phrase --vocalized"
+	@echo "  python -m arrand -c nonsense -n 2"
+
+# Push code to GitHub
+publish:
+	git push origin master
